@@ -35,4 +35,4 @@ This workflow generates verifiable builds for 'autocrat_v0' and stores them in t
 
 ## Credits
 
-This is a modification of Helium's https://github.com/helium/helium-program-library/blob/68da8e38e769a22bca0492156695b9677978d139/.github/actions/build-verified/action.yaml#L1verified build action that they use internally.
+This is a modification of Helium's [build verified action](https://github.com/helium/helium-program-library/blob/68da8e38e769a22bca0492156695b9677978d139/.github/actions/build-verified/action.yaml#L1verified) that they use internally.
