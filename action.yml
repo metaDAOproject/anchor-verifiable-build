@@ -2,7 +2,7 @@ name: 'Anchor Verifiable Build'
 description: 'Generate a verifiable Anchor build'
 inputs:
   program:
-    description: 'The program name (e.g. 'autocrat_v0')'
+    description: 'The program name'
     required: true
   anchor-version:
     description: 'Version of Anchor to use'
