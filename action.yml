@@ -1,5 +1,8 @@
 name: 'Anchor Verifiable Build'
 description: 'Generate a verifiable Anchor build'
+branding:
+  icon: anchor
+  color: blue
 inputs:
   program:
     description: 'The program name'
