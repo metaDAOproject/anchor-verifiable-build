@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
-      - uses: metadaoproject/anchor-verifiable-build@v1
+      - uses: metadaoproject/anchor-verifiable-build@v0
         with:
           program: 'autocrat_v0'
           anchor-version: '0.29.0'
