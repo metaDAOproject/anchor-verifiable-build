@@ -24,7 +24,7 @@ jobs:
           anchor-version: '0.29.0'
           solana-cli-version: '1.17.16'
       - run: cp target/deploy/autocrat_v0.so ./verifiable-builds
-      - name: Commit verifiable build, if it's different from what exists
+      - name: Commit verifiable build if it's different from what exists
         uses: EndBug/add-and-commit@v9.1.4
         with:
           default_author: github_actions
