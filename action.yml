@@ -13,6 +13,10 @@ inputs:
   solana-cli-version:
     description: 'Version of Solana to use'
     required: true
+  features:
+    description: 'Features to pass to cargo'
+    required: false
+    default: 'default'
 runs:
   using: 'composite'
   steps:
@@ -39,7 +43,7 @@ runs:
     - run: cargo install solana-verify
       if: steps.cache-solana-verify.outputs.cache-hit != 'true'
       shell: bash
-    - run: ~/.cargo/bin/solana-verify build --library-name $PROGRAM --base-image ellipsislabs/solana:${{ inputs.solana-cli-version }}
+    - run: ~/.cargo/bin/solana-verify build --library-name $PROGRAM --base-image ellipsislabs/solana:${{ inputs.solana-cli-version }} -- --features ${{ inputs.features }}
       shell: bash
       env:
         PROGRAM: ${{ inputs.program }}
