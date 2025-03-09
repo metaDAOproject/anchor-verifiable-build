@@ -25,7 +25,7 @@ runs:
         anchor-version: ${{ inputs.anchor-version }}
         solana-cli-version: ${{ inputs.solana-cli-version }}
     - name: Cache Cargo registry + index
-      uses: actions/cache@v2
+      uses: actions/cache@v4
       id: cache-cargo-registry
       with:
         path: |
@@ -34,7 +34,7 @@ runs:
           ~/.cargo/git/db/
         key: cargo-${{ runner.os }}-v0001-${{ hashFiles('**/Cargo.lock') }}
     - name: Cache Solana Verify
-      uses: actions/cache@v2
+      uses: actions/cache@v4
       id: cache-solana-verify
       with:
         path: |
