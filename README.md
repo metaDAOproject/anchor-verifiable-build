@@ -15,14 +15,14 @@ name: update-verifiable-build
 on: [push]
 jobs:
   run-anchor-test:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
       - uses: metadaoproject/anchor-verifiable-build@v0.2
         with:
           program: 'autocrat_v0'
           anchor-version: '0.29.0'
-          solana-cli-version: '1.17.16'
+          solana-cli-version: '1.18.26'
       - run: cp target/deploy/autocrat_v0.so ./verifiable-builds
       - name: Commit verifiable build if it's different from what exists
         uses: EndBug/add-and-commit@v9.1.4
