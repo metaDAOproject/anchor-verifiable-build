@@ -39,8 +39,8 @@ runs:
       with:
         path: |
           ~/.cargo/bin/solana-verify
-        key: cargo-${{ runner.os }}-solana-verify
-    - run: cargo install solana-verify --version 0.4.10
+        key: cargo-${{ runner.os }}-solana-verify-v0.4.10
+    - run: cargo install --git https://github.com/Ellipsis-Labs/solana-verifiable-build --tag v0.4.10 solana-verify
       if: steps.cache-solana-verify.outputs.cache-hit != 'true'
       shell: bash
     - run: ~/.cargo/bin/solana-verify build --library-name $PROGRAM --base-image ellipsislabs/solana:${{ inputs.solana-cli-version }} -- --features ${{ inputs.features }}
